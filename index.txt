@@ -1,0 +1,23 @@
+Struttura tabella: Utenti (userId, nome, cognome, città, roleId)
+a. Estrarre dalla tabella `Utenti` tutte le persone che vivono a Roma.
+b. Contare quante persone si chiamano Paolo
+c. Data anche la tabella Ruoli (roleId, nome, permessi) estrarre tutti i nomi delle
+persone con ruolo con nome ‘admin’. roleId nella tabella Utenti è chiave
+esterna.
+
+
+a.
+SELECT *
+FROM Utenti
+WHERE città = 'Roma';
+
+b.
+SELECT COUNT(*)
+FROM Utenti
+WHERE nome = 'Paolo';
+
+c.
+SELECT Utenti.nome
+FROM Utenti
+JOIN Ruoli ON Utenti.roleId = Ruoli.roleId
+WHERE Ruoli.nome = 'admin';
