@@ -1,5 +1,13 @@
+.uppercase {
+    text-transform: uppercase;
+}
+
 .gap-3 {
     gap: 3rem;
+}
+
+.smile-face {
+    color: #5a6bf3;
 }
 
 .small-text {
